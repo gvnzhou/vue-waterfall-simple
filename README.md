@@ -16,19 +16,12 @@ npm install --save vue-waterfall-simple
 
 Vue-waterfall-simple is a [UMD](https://github.com/umdjs/umd) module, which can be used as a module in both CommonJS and AMD modular environments. When in non-modular environment, `Waterfall` will be registered as a global variable.
 
-### Import
-
-#### ES6
+### ES6
 
 ```js
 /* in xxx.vue */
 
 import Waterfall from 'vue-waterfall-simple'
-
-/*
- * or use ES5 code (vue-waterfall.min.js) :
- * import { Waterfall, WaterfallSlot } from 'vue-waterfall'
- */
 
 export default {
   ...
@@ -37,6 +30,22 @@ export default {
   },
   ...
 }
+```
+
+### Browser
+
+```js
+<script src="path/to/vue/vue.js"></script>
+<script src="path/to/vue-waterfall-simple.js"></script>
+```
+
+```js
+new Vue({
+  el: '#app',
+  components: {
+    vueWaterfallSimple
+  }
+})
 ```
 
 ### HTML structure
@@ -63,7 +72,49 @@ export default {
 
 ## Options
 
-Wating...
+<table>
+  <thead>
+    <tr>
+      <th width="160">Name</th>
+      <th width="160">Type</th>
+      <th width="160">Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>originData</td>
+      <td><code>Array</code></td>
+      <td>-</td>
+      <td>Required. Data used to render the waterfall.</td>
+    </tr>
+    <tr>
+      <td>containerWidth</td>
+      <td><code>Number</code></td>
+      <td>-</td>
+      <td>Required.</td>
+    </tr>
+    <tr>
+      <td>columnWidth</td>
+      <td><code>Number</code></td>
+      <td>-</td>
+      <td>Required.</td>
+    </tr>
+    <tr>
+      <td>gapHeight</td>
+      <td><code>Number</code></td>
+      <td><code>30</code></td>
+      <td>The standard space (px) between row.</td>
+    </tr>
+    <tr>
+      <td>gapWidth</td>
+      <td><code>Number</code></td>
+      <td><code>30</code></td>
+      <td>The standard space (px) between column.</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## License
 
